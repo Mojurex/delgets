@@ -1,0 +1,5 @@
+/* Cross-fade-ийн үед хоёр дэлгэц давхцана */
+.page {
+  position: absolute;
+  inset: 0;
+}

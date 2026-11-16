@@ -1,0 +1,26 @@
+.marks {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  font: 800 var(--fs-0) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+}
+
+.plus {
+  color: var(--plus);
+}
+
+.minus {
+  color: var(--minus);
+}
+
+.zero {
+  color: var(--muted);
+}

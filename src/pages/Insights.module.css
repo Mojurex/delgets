@@ -1,0 +1,38 @@
+.page {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  margin: 0;
+  font: 500 var(--fs-1) / 1 var(--font-text);
+  color: var(--muted);
+}
+
+.empty {
+  margin: 48px 0;
+  font-size: var(--fs-2);
+  color: var(--muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  max-width: 1360px;
+  padding: 28px 0;
+  border-top: var(--hairline);
+  font: 500 var(--fs-4) / 1.2 var(--font-text);
+  text-wrap: balance;
+}

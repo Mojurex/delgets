@@ -1,0 +1,19 @@
+.delta {
+  display: inline-block;
+  min-width: 64px;
+  font: 600 var(--fs-0) / 1 var(--font-text);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.up {
+  color: var(--plus);
+}
+
+.down {
+  color: var(--minus);
+}
+
+.same {
+  color: var(--muted);
+}

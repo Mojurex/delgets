@@ -1,0 +1,248 @@
+.page {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  height: 100%;
+}
+
+.empty {
+  margin: 48px 0;
+  font-size: var(--fs-2);
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------- гарчиг */
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 0 16px;
+  border-bottom: var(--hairline);
+}
+
+.who {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.name {
+  margin: 0;
+  font: 800 var(--fs-7) / 0.9 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+}
+
+.standing {
+  margin: 0;
+  font-size: var(--fs-2);
+  color: var(--muted);
+}
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.total {
+  margin: 0;
+  font: 800 var(--fs-6) / 0.9 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+}
+
+.totalUnit {
+  font: 500 var(--fs-2) / 1 var(--font-text);
+}
+
+.plusMinus {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  font: 600 var(--fs-2) / 1 var(--font-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.plus {
+  color: var(--plus);
+}
+
+.minus {
+  color: var(--minus);
+}
+
+.zero {
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------- их бие */
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 560px;
+  column-gap: 64px;
+  min-height: 0;
+  padding-top: 20px;
+}
+
+.subTitle {
+  margin: 0 0 8px;
+  font: 500 var(--fs-0) / 1 var(--font-text);
+  color: var(--muted);
+}
+
+.bars,
+.events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Diverging bar: хасагдсан нь голоос зүүн, авсан нь баруун тийш */
+.barRow {
+  border-top: var(--hairline);
+}
+
+.barButton {
+  display: grid;
+  grid-template-columns: 220px 72px minmax(0, 1fr) 72px;
+  column-gap: 16px;
+  align-items: center;
+  width: 100%;
+  height: var(--touch);
+  text-align: left;
+}
+
+.barLabel {
+  font-size: var(--fs-1);
+}
+
+.minusValue,
+.plusValue {
+  font: 600 var(--fs-1) / 1 var(--font-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.minusValue {
+  color: var(--minus);
+  text-align: right;
+}
+
+.plusValue {
+  color: var(--plus);
+}
+
+.barTrack {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 28px;
+}
+
+.barTrack::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  bottom: -10px;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--muted);
+}
+
+.minusBar {
+  justify-self: end;
+  height: 100%;
+  background: var(--minus);
+}
+
+.plusBar {
+  height: 100%;
+  background: var(--plus);
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------- сүүлийн оноонууд */
+
+.recent {
+  padding-top: 16px;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 96px 220px 88px minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: center;
+  height: 44px;
+  border-top: var(--hairline);
+  white-space: nowrap;
+}
+
+.eventDate {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.eventPoints {
+  font: 800 var(--fs-1) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.eventReason {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------------- нэг шалгуурын бүх бичлэг */
+
+.categoryView {
+  grid-row: 2 / 4;
+  padding-top: 20px;
+}
+
+.categoryHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.categoryTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  margin: 0;
+  font: 800 var(--fs-3) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+}
+
+.categorySum {
+  display: flex;
+  gap: 20px;
+  font: 600 var(--fs-2) / 1 var(--font-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch);
+  padding: 0 28px;
+  border: 2px solid var(--muted);
+  font-size: var(--fs-1);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+}

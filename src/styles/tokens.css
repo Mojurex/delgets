@@ -1,0 +1,80 @@
+/*
+ * Өнгө, үсэг, хэмжээний token. Өөр өнгө нэмэхгүй, gradient чимэглэл хэрэглэхгүй,
+ * бүх элементийн доор адилхан сүүдэр тавихгүй.
+ */
+:root {
+  --bg: #12263f;
+  --surface: #1a3354;
+  --text: #eef2f6;
+  --muted: #8095ae;
+  --plus: #3cc48d;
+  --minus: #ef6b5e;
+  --top: #f2c14e;
+
+  --font-display: 'Science Gothic Variable', 'Onest Variable', sans-serif;
+  --font-text: 'Onest Variable', sans-serif;
+  /* Science Gothic-ийн өргөн хэлбэр */
+  --display-stretch: 110%;
+
+  /* Type scale: 24px × 1.25ⁿ (1920×1080 дээр) */
+  --fs-0: 24px;
+  --fs-1: 30px;
+  --fs-2: 37px;
+  --fs-3: 47px;
+  --fs-4: 59px;
+  --fs-5: 73px;
+  --fs-6: 92px;
+  --fs-7: 114px;
+  --fs-8: 143px;
+  --fs-9: 179px;
+
+  --stage-w: 1920px;
+  --stage-h: 1080px;
+  --header-h: 88px;
+  --rail-w: 320px;
+  --pad: 40px;
+  /* Дарах боломжтой элементийн хамгийн бага өндөр */
+  --touch: 64px;
+  --hairline: 2px solid var(--surface);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--fs-0);
+  line-height: 1.25;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 4px;
+}

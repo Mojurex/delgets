@@ -1,0 +1,226 @@
+.page {
+  display: grid;
+  grid-template-rows: 128px minmax(0, 1fr) 36px;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------- шилдэг 3 + үлдсэн өдөр */
+
+.strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--hairline);
+}
+
+.top3 {
+  display: flex;
+  align-items: baseline;
+  gap: 64px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topItem {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+.topRank {
+  font-size: var(--fs-1);
+  color: var(--muted);
+}
+
+.topName {
+  font-size: var(--fs-3);
+}
+
+.topScore {
+  font-size: var(--fs-4);
+}
+
+/* Зөвхөн 1-р байр */
+.first .topName,
+.first .topScore {
+  color: var(--top);
+}
+
+.first .topName {
+  font-size: var(--fs-4);
+}
+
+.first .topScore {
+  font-size: var(--fs-5);
+}
+
+.empty {
+  margin: 0;
+  font-size: var(--fs-2);
+  color: var(--muted);
+}
+
+.daysLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.daysLabel {
+  color: var(--muted);
+}
+
+.daysValue {
+  font: 800 var(--fs-3) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+}
+
+.daysUnit {
+  font: 500 var(--fs-1) / 1 var(--font-text);
+}
+
+/* ---------------------------------------------------------- 3 багана */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;
+  min-height: 0;
+}
+
+.column {
+  min-width: 0;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin: 0;
+  font: 500 var(--fs-0) / 1 var(--font-text);
+  color: var(--muted);
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Мөр: дэвтрийн хоёр шугам, 64px */
+.row {
+  position: relative;
+  border-top: var(--hairline);
+}
+
+.rowButton {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px 104px 1fr auto;
+  grid-template-rows: 40px 24px;
+  white-space: nowrap;
+  align-items: center;
+  width: 100%;
+  height: var(--touch);
+  text-align: left;
+}
+
+.rank {
+  grid-row: 1 / 3;
+  align-self: start;
+  padding-top: 6px;
+  font: 800 var(--fs-1) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.name {
+  font: 800 var(--fs-2) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+}
+
+.total {
+  font: 800 var(--fs-2) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.sub {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.plus,
+.minus,
+.zero {
+  font: 600 var(--fs-0) / 1 var(--font-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.zero {
+  color: var(--muted);
+}
+
+.plus {
+  color: var(--plus);
+}
+
+.minus {
+  color: var(--minus);
+}
+
+.sub > :last-child {
+  margin-left: auto;
+}
+
+/* Шинэ оноо ирэхэд мөр 1 удаа зөөлөн тодорно (зөвхөн opacity) */
+.flash {
+  position: absolute;
+  inset: 0;
+  background: var(--text);
+  opacity: 0;
+  pointer-events: none;
+  animation: flash 1400ms ease-out forwards;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.22;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flash {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------- тайлбар */
+
+.legend {
+  align-self: end;
+  margin: 0;
+  color: var(--muted);
+}

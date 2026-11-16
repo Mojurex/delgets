@@ -1,0 +1,38 @@
+.chart {
+  display: block;
+  overflow: visible;
+}
+
+.baseline {
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.axis {
+  font: 500 var(--fs-0) var(--font-text);
+  font-variant-numeric: tabular-nums;
+  fill: var(--muted);
+}
+
+.axisStrong {
+  font: 600 var(--fs-0) var(--font-text);
+  font-variant-numeric: tabular-nums;
+  fill: var(--text);
+}
+
+.line {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.minus {
+  font: 800 var(--fs-1) var(--font-display);
+  fill: var(--minus);
+}
+
+.dot {
+  fill: var(--text);
+}

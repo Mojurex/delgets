@@ -1,0 +1,89 @@
+.frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--rail-w);
+  width: var(--stage-w);
+  height: var(--stage-h);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  display: grid;
+  grid-template-rows: var(--header-h) minmax(0, 1fr);
+  min-width: 0;
+  padding: 0 var(--pad);
+}
+
+/* ---------------------------------------------------------- дээд мөр */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  column-gap: 40px;
+  border-bottom: var(--hairline);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: var(--touch);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.title {
+  margin: 0;
+  font: 500 var(--fs-1) / 1 var(--font-text);
+}
+
+/* Буцах товч: брэндийн оронд, үргэлж яг энэ байранд */
+.back {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  min-height: var(--touch);
+  padding: 0 28px;
+  border: 2px solid var(--muted);
+  font: 500 var(--fs-1) / 1 var(--font-text);
+  color: var(--text);
+}
+
+.month {
+  font: 400 var(--fs-1) / 1 var(--font-text);
+  color: var(--muted);
+}
+
+.clock {
+  font: 700 var(--fs-2) / 1 var(--font-display);
+  font-stretch: var(--display-stretch);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------- их бие */
+
+.content {
+  position: relative;
+  min-height: 0;
+}
+
+.offline {
+  font: 400 var(--fs-0) / 1 var(--font-text);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------- захын тэмдэглэл: шууд урсгал */
+
+.rail {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 var(--pad) 0 32px;
+  border-left: var(--hairline);
+}
